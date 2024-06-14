@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-    <title>Blank Page | PlainAdmin Demo</title>
+    <link rel="shortcut icon" href="<?= base_url('assets/'); ?> images/favicon.svg" type="image/x-icon" />
+    <title><?= $title ?></title>
 
     <!-- ========== All CSS files linkup ========= -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/lineicons.css" />
-    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/lineicons.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/fullcalendar.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/main.css" />
 
-    <!-- Icon Link -->
+    <!-- Tobler Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css" integrity="sha512-tpsEzNMLQS7w9imFSjbEOHdZav3/aObSESAL1y5jyJDoICFF2YwEdAHOPdOr1t+h8hTzar0flphxR76pd0V1zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -30,7 +30,7 @@
     <aside class="sidebar-nav-wrapper">
         <div class="navbar-logo">
             <a href="index.html">
-                <img src="assets/images/logo/kb.png" width="100%" height="60px" alt="logo" />
+                <img src="<?= base_url('assets/'); ?>images/logo/kb.png" width="100%" height="60px" alt="logo" />
             </a>
         </div>
         <nav class="sidebar-nav">
@@ -59,7 +59,7 @@
                     </a>
                     <ul id="ddmenu_1" class="collapse dropdown-nav">
                         <li>
-                            <a href="index.html"> Penawaran </a>
+                            <a href="<?= base_url('agent') ?>"> Penawaran </a>
                         </li>
                         <li>
                             <a href="index.html"> Perhitungan Premi </a>
@@ -109,11 +109,11 @@
                                     <div class="profile-info">
                                         <div class="info">
                                             <div class="image">
-                                                <img src="assets/images/profile/profile-image.png" alt="" />
+                                                <img src="<?= base_url('assets/'); ?>images/profile/profile-image.png" alt="" />
                                             </div>
                                             <div>
-                                                <h6 class="fw-500">Adam Joe</h6>
-                                                <p>Admin</p>
+                                                <h6 class="fw-500 text-uppercase"><?= session()->get('username'); ?></h6>
+                                                <p><?= session()->get('role_id'); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+                                        <a href="<?= base_url('/') ?>"> <i class="lni lni-exit"></i> Sign Out </a>
                                     </li>
                                 </ul>
                             </div>
@@ -145,20 +145,6 @@
         <!-- ========== section start ========== -->
         <section class="section">
             <div class="container-fluid">
-                <!-- ========== title-wrapper start ========== -->
-                <div class="title-wrapper pt-30">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="title">
-                                <h2>Title</h2>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                    </div>
-                    <!-- end row -->
-                </div>
-                <!-- ========== title-wrapper end ========== -->
                 <?= $this->renderSection('content'); ?>
             </div>
             <!-- end container -->
@@ -193,10 +179,15 @@
     <!-- ======== main-wrapper end =========== -->
 
     <!-- ========= All Javascript files linkup ======== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jvectormap.min.js"></script>
-    <script src="assets/js/polyfill.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/Chart.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/dynamic-pie-chart.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/moment.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/fullcalendar.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/jvectormap.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/world-merc.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/polyfill.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/main.js"></script>
 </body>
 
 </html>

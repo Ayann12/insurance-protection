@@ -12,4 +12,6 @@ $routes->get('logout', 'Login::logout');
 
 
 $routes->get('agent/home', 'Agent\home::index', ['filter' => 'AgentFilter']);
+
+$routes->get('/agent', 'Agent\Home::penawaran');
 $routes->get('marketing/home', 'Marketing\home::index', ['filter' => 'MarketingFilter']);

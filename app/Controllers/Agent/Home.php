@@ -14,4 +14,12 @@ class Home extends BaseController
         ];
         return view('agent/home', $data);
     }
+
+    public function penawaran()
+    {
+        $data = [
+            'title' => 'penawaran'
+        ];
+        return view('agent/penawaran', $data);
+    }
 }
